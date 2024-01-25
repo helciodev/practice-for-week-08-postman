@@ -56,9 +56,22 @@ path of the request should be [http://localhost:5000/posts].
 Your goal is to request the following operations on the server using Postman:
 
 - create a post
+  - method: POST, URL:[http://localhost:5000/posts]
+    - title: 'something at your choice'
+    - description: 'something at your choice'
+    - `send`
 - leave two comments on the post
+  - method: POST, URL:[http://localhost:5000/posts/yourPostId/comments]
+    - text: 'something at your choice'
+    - `send`
 - edit the post
+- method: POST, URL:[http://localhost:5000/posts/yourPostId]
+  - title: 'something at your choice'
+  - description: 'something at your choice'
+  - `send`
 - delete one of the comments on the post
+  - method: POST, URL:[http://localhost:5000/comments/commentId/delete]
+    - `send`
 
 Formulate the requests in Postman and each request should be sent with all the
 necessary request components. All requests that require a body should have the
